@@ -1,0 +1,214 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* yousentech_inventory_default
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20231112\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-20 12:27+0000\n"
+"PO-Revision-Date: 2025-08-20 15:35+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.4.1\n"
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_company__allowed_warehouse_ids
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_user_inventory_config__allowed_warehouse_ids
+msgid "Allowed Warehouses"
+msgstr "المخازن المسموحة"
+
+#. module: yousentech_inventory_default
+#: model:ir.model,name:yousentech_inventory_default.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_user_inventory_config__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields.selection,name:yousentech_inventory_default.selection__res_company__default_product_type__consu
+#: model:ir.model.fields.selection,name:yousentech_inventory_default.selection__res_users__default_product_type__consu
+msgid "Consumable"
+msgstr "استهلاكي"
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_user_inventory_config__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_user_inventory_config__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_company__default_product_type
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_users__default_product_type
+msgid "Default Product Type"
+msgstr "نوع المنتج الإفتراضي"
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_company__default_warehouse_id
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_user_inventory_config__default_warehouse_id
+msgid "Default Warehouse"
+msgstr "المخزن الإفتراضي"
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_user_inventory_config__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_sale_order__domain_allowed_warehouse_ids
+msgid "Domain Allowed Warehouse"
+msgstr ""
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_user_inventory_config__id
+msgid "ID"
+msgstr ""
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields.selection,name:yousentech_inventory_default.selection__res_user_inventory_config__operation_type__internal
+msgid "Internal"
+msgstr "داخلي"
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_users__inventory_config_ids
+#: model_terms:ir.ui.view,arch_db:yousentech_inventory_default.inherit_view_company_form_default_product_type_default_warehouse_idس
+#: model_terms:ir.ui.view,arch_db:yousentech_inventory_default.inherit_view_res_users_form_default_product_type
+msgid "Inventory Defaults"
+msgstr "إفتراضيات المخزون"
+
+#. module: yousentech_inventory_default
+#: model:ir.model,name:yousentech_inventory_default.model_res_user_inventory_config
+msgid "Inventory User Config"
+msgstr ""
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_user_inventory_config__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_user_inventory_config__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_user_inventory_config__operation_type
+msgid "Operation Type"
+msgstr "نوع العملية"
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_purchase_order__picking_type_domain
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_stock_picking__picking_type_domain
+msgid "Picking Type Domain"
+msgstr ""
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_company__sale_picking_type_id
+msgid "Place Of Sale"
+msgstr "مكان البيع"
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_user_inventory_config__picking_type_id
+msgid "Place Of sale/purchase"
+msgstr "مكان البيع / الشراء"
+
+#. module: yousentech_inventory_default
+#: model:ir.model,name:yousentech_inventory_default.model_product_template
+msgid "Product"
+msgstr "المنتج"
+
+#. module: yousentech_inventory_default
+#: model:ir.model,name:yousentech_inventory_default.model_purchase_order
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields.selection,name:yousentech_inventory_default.selection__res_user_inventory_config__operation_type__incoming
+msgid "Purchases"
+msgstr "المشتريات"
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields.selection,name:yousentech_inventory_default.selection__res_user_inventory_config__operation_type__outgoing
+msgid "Sales"
+msgstr "المبيعات"
+
+#. module: yousentech_inventory_default
+#: model:ir.model,name:yousentech_inventory_default.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields.selection,name:yousentech_inventory_default.selection__res_company__default_product_type__service
+#: model:ir.model.fields.selection,name:yousentech_inventory_default.selection__res_users__default_product_type__service
+msgid "Service"
+msgstr "الخدمة"
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields.selection,name:yousentech_inventory_default.selection__res_company__default_product_type__product
+#: model:ir.model.fields.selection,name:yousentech_inventory_default.selection__res_users__default_product_type__product
+msgid "Storable Product"
+msgstr "منتج قابل للتخزين"
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,help:yousentech_inventory_default.field_res_company__default_product_type
+#: model:ir.model.fields,help:yousentech_inventory_default.field_res_users__default_product_type
+msgid "This type will be used as default when creating new products"
+msgstr ""
+
+#. module: yousentech_inventory_default
+#: model:ir.model,name:yousentech_inventory_default.model_stock_picking
+msgid "Transfer"
+msgstr "تحويل "
+
+#. module: yousentech_inventory_default
+#: model:ir.model,name:yousentech_inventory_default.model_res_users
+msgid "User"
+msgstr "المستخدم"
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_user_inventory_config__user_id
+msgid "Users"
+msgstr "المستخدمين"
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_company__purchase_picking_type_id
+msgid "Where to buy"
+msgstr "مكان الشراء"
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_company__purchase_picking_type_domain
+msgid "branch_picking_type_domain"
+msgstr ""
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_user_inventory_config__domain_company_id
+msgid "domain_company_id"
+msgstr ""
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_company__domain_default_warehouse_id
+msgid "domain_default_warehouse_id"
+msgstr ""
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_company__domain_picking_type_id
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_user_inventory_config__domain_picking_type_id
+msgid "domain_picking_type_id"
+msgstr ""
+
+#. module: yousentech_inventory_default
+#: model:ir.model.fields,field_description:yousentech_inventory_default.field_res_company__domain_allowed_warehouse_ids
+msgid "domain_stock_allowed_ids"
+msgstr ""

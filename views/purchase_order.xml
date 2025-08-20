@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="add_filed_picking_type_domain_form_view">
+            <field name="name">add_filed_picking_type_domain</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='currency_id']" position="after">
+                    <field name="picking_type_domain" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='picking_type_id']" position="attributes">
+                    <attribute name="domain">picking_type_domain</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

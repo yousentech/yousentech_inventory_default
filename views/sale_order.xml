@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <record id="inherit_view_sale_order_form_add_domain_allowed_warehouse_ids" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='other_information']//group[@name='sale_shipping']/field[@name='incoterm']" position="before">
+                    <field name="domain_allowed_warehouse_ids" />
+                </xpath>
+                <xpath expr="//field[@name='warehouse_id']" position="attributes">
+                    <attribute name="domain">domain_allowed_warehouse_ids</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
