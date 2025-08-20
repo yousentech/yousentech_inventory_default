@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="inherit_view_res_users_form_default_product_type">
+            <field name="name">res.users.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <!--  Inventory defaults  -->
+                    <page string="Inventory Defaults" name="inventory_defaults">
+
+                        <field name="inventory_config_ids">
+                            <tree string="Inventory Defaults" editable="bottom">
+                                <field name="operation_type"></field>
+                                <field name="domain_company_id" column_invisible='1'></field>
+                                <field name="company_id" domain='domain_company_id'></field>
+                                <field name="allowed_warehouse_ids" widget="many2many_tags"
+                                    options="{'no_quick_create':True,'no_create_edit':True,'no_open': True,'no_create': True}"></field>
+                                <field name="default_warehouse_id"
+                                    options="{'no_quick_create':True,'no_create_edit':True,'no_open': True,'no_create': True}"></field>
+                                <field name="domain_picking_type_id" column_invisible='1'></field>
+                                <field name="picking_type_id"
+                                    domain='domain_picking_type_id'></field>
+
+                            </tree>
+                        </field>
+
+                        <group>
+                            <group>
+                                <field name="default_product_type" />
+
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

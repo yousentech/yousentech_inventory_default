@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view"
+            id="inherit_view_company_form_default_product_type_default_warehouse_idس">
+            <field name="name">base.view_company_form.inherit</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <!--  Inventory defaults  -->
+                    <page string="Inventory Defaults" name="inventory_defaults">
+                        <group>
+                            <group>
+                                <field name="domain_allowed_warehouse_ids" invisible="1" />
+                                <field name="domain_default_warehouse_id" invisible="1" />
+                                <field name="allowed_warehouse_ids"
+                                    domain="domain_allowed_warehouse_ids" widget="many2many_tags" />
+                                <field name="default_warehouse_id"
+                                    domain="domain_default_warehouse_id" />
+
+                            </group>
+                            <group>
+                                <field name="default_product_type" />
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_company_defaultss_form">
+            <field name="name">base.view.company.defaults.form</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form" />
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet/notebook/page[@name='inventory_defaults']"
+                    position="inside">
+                    <group>
+                        <group>
+                            <field name="purchase_picking_type_domain" invisible="1" />
+                            <field name="purchase_picking_type_id"></field>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="sale_picking_type_id" />
+                            <field name="domain_picking_type_id" invisible="1" />
+                        </group>
+                    </group>
+                </xpath>
+
+                <xpath expr="//field[@name='purchase_picking_type_id']" position="attributes">
+                    <attribute name="domain">purchase_picking_type_domain</attribute>
+                </xpath>
+                <xpath expr="//field[@name='sale_picking_type_id']" position="attributes">
+                    <attribute name="domain">domain_picking_type_id</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

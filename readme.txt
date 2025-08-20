@@ -1,1 +1,1 @@
-read
+yousentech_inventory_default
