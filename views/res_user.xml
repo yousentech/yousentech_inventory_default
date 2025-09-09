@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-        <record model="ir.ui.view" id="inherit_view_res_users_form_default_product_type">
+        <record model="ir.ui.view" id="inherit_view_res_users_form_default_inventory_config_ids_product_type">
             <field name="name">res.users.form</field>
             <field name="model">res.users</field>
             <field name="inherit_id" ref="base.view_users_form" />
             <field name="arch" type="xml">
-                <xpath expr="//notebook" position="inside">
-                    <!--  Inventory defaults  -->
-                    <page string="Inventory Defaults" name="inventory_defaults">
+                <xpath expr="//notebook/page[@name='inventory_defaults']" position="inside">
+                     <group>
+                            <group>
+                                <field name="default_product_type" />
 
-                        <field name="inventory_config_ids">
+                            </group>
+                        </group>
+                      <field name="inventory_config_ids">
                             <tree string="Inventory Defaults" editable="bottom">
                                 <field name="operation_type"></field>
                                 <field name="domain_company_id" column_invisible='1'></field>
@@ -26,13 +29,7 @@
                             </tree>
                         </field>
 
-                        <group>
-                            <group>
-                                <field name="default_product_type" />
-
-                            </group>
-                        </group>
-                    </page>
+                       
                 </xpath>
 
             </field>
