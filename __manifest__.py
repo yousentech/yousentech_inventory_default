@@ -8,7 +8,7 @@
     'website': "https://www.qimamhd.com",
     'company': 'yousen Techno Solutions',
     'maintainer': 'yousen Techno Solutions',
-    'depends': ['base', 'sale','purchase','account', 'stock','sale_management'],
+    'depends': ['base', 'sale','purchase','account', 'stock','sale_management','yousentech_inventory'],
     'data': [
         'security/ir.model.access.csv',
         'views/res_user.xml',
