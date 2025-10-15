@@ -14,7 +14,7 @@
         'views/res_user.xml',
         'views/res_company.xml',
         'views/purchase_order.xml',
-        'views/stock_picking.xml',
+        # 'views/stock_picking.xml',
          # 'views/sale_order.xml'
     ],
     'images': ['static/description/icon.png'],

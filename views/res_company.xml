@@ -2,7 +2,7 @@
 <odoo>
     <data>
         <record model="ir.ui.view"
-            id="inherit_view_company_form_default_product_type_default_warehouse_idس">
+            id="inherit_view_company_form_default_product_type_default_warehouse_id">
             <field name="name">base.view_company_form.inherit</field>
             <field name="model">res.company</field>
             <field name="inherit_id" ref="base.view_company_form" />
@@ -49,12 +49,12 @@
                             <field name="domain_picking_type_id" invisible="1" />
                         </group>
                     </group>
-                    <group>
+                    <!-- <group>
                     <group>
                             <field name="internal_picking_type_id" />
                             <field name="domain_internal_picking_type_id" invisible="1" />
                         </group>
-                    </group>
+                    </group> -->
                 </xpath>
 
                 <xpath expr="//field[@name='purchase_picking_type_id']" position="attributes">
@@ -63,9 +63,9 @@
                 <xpath expr="//field[@name='sale_picking_type_id']" position="attributes">
                     <attribute name="domain">domain_picking_type_id</attribute>
                 </xpath>
-                  <xpath expr="//field[@name='internal_picking_type_id']" position="attributes">
+                  <!-- <xpath expr="//field[@name='internal_picking_type_id']" position="attributes">
                     <attribute name="domain">domain_internal_picking_type_id</attribute>
-                </xpath>
+                </xpath> -->
             </field>
         </record>
 
