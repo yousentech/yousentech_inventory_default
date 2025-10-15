@@ -1,4 +1,5 @@
-from odoo import models, fields, api
+from odoo import models, fields, api,_
+from odoo.exceptions import ValidationError
 
 class res_user_inventory_config(models.Model):
     _name = 'res.user.inventory.config'
@@ -47,3 +48,26 @@ class res_user_inventory_config(models.Model):
     def compute_company_id_domain(self):
       for rec in self :  
         rec.domain_company_id = [("id", "in", rec.user_id.company_ids.ids)]
+        
+    
+    @api.onchange('operation_type','company_id')
+    def _onchangeOperationType(self):
+        for rec in self:
+            rec.allowed_warehouse_ids = False
+            rec.default_warehouse_id = False
+            rec.picking_type_id = False
+            
+    @api.constrains('company_id', 'operation_type')
+    def _check_company_operation_type_unique(self):
+        for record in self:
+            if record.company_id and record.operation_type:
+                existing_records = self.search([
+                    ('company_id', '=', record.company_id.id),
+                    ('operation_type', '=', record.operation_type),
+                    ('id', '!=', record.id)
+                ])
+                if existing_records:
+                    raise ValidationError(_(
+                        "A record with company '%s' and operation type '%s' already exists!" %
+                        (record.company_id.name, record.operation_type)))
+                    
