@@ -18,14 +18,16 @@ class stock_picking(models.Model):
                 ('user_id', '=', self.env.user.id),('company_id', '=', order.company_id.id),('operation_type', '=', 'internal')], limit=1)
             
             # Priority 1: Use user's default warehouse from config
-            if config and config.default_warehouse_id:
+            if config and config.default_warehouse_id and config.picking_type_id :
                 domain = [
                     ('warehouse_id', '=', config.default_warehouse_id.id),
-                    ('code', '=', 'incoming')]
+                    ('code', '=', 'internal')]
+                order.picking_type_id = config.picking_type_id.id if order.picking_type_code == 'internal' else False
             # Priority 2: Fall back to company default
-            elif order.company_id.default_warehouse_id:
+            elif order.company_id.default_warehouse_id and order.company_id.internal_picking_type_id:
                 domain = [
                     ('warehouse_id', '=', order.company_id.default_warehouse_id.id),
-                    ('code', '=', 'incoming')]
-            
+                    ('code', '=', 'internal')]
+                order.picking_type_id = order.company_id.internal_picking_type_id.id if order.picking_type_code == 'internal' else False
+
             order.picking_type_domain = domain
