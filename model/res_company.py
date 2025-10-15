@@ -43,12 +43,12 @@ class res_company(models.Model):
         help='This type will be used as default when creating new products'
     )
   
-    internal_picking_type_id = fields.Many2one('stock.picking.type', string='Internal Operation Type',domain=[('code','=','internal')])
-    # domain feild
-    domain_internal_picking_type_id= fields.Char("domain_internal_picking_type_id",compute="_compute_internal_picking_type_domain")
+    # internal_picking_type_id = fields.Many2one('stock.picking.type', string='Internal Operation Type',domain=[('code','=','internal')])
+    # # domain feild
+    # domain_internal_picking_type_id= fields.Char("domain_internal_picking_type_id",compute="_compute_internal_picking_type_domain")
     
-    @api.depends('default_warehouse_id')
-    def _compute_internal_picking_type_domain(self):
-        for record in self:  
-            record.domain_internal_picking_type_id = [('warehouse_id', '=', record.default_warehouse_id.id),('code','=','internal')]       
+    # @api.depends('default_warehouse_id')
+    # def _compute_internal_picking_type_domain(self):
+    #     for record in self:  
+    #         record.domain_internal_picking_type_id = [('warehouse_id', '=', record.default_warehouse_id.id),('code','=','internal')]       
             
