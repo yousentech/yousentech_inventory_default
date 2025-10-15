@@ -67,7 +67,8 @@ class res_user_inventory_config(models.Model):
                     ('id', '!=', record.id)
                 ])
                 if existing_records:
-                    raise ValidationError(_(
-                        "A record with company '%s' and operation type '%s' already exists!" %
-                        (record.company_id.name, record.operation_type)))
+                    raise ValidationError(
+                        _("A record with company '%s' and operation type '%s' already exists!") % 
+                        (record.company_id.name, record.operation_type)
+                    )
                     
