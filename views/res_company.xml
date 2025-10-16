@@ -49,12 +49,12 @@
                             <field name="domain_picking_type_id" invisible="1" />
                         </group>
                     </group>
-                    <!-- <group>
+                    <group>
                     <group>
                             <field name="internal_picking_type_id" />
                             <field name="domain_internal_picking_type_id" invisible="1" />
                         </group>
-                    </group> -->
+                    </group>
                 </xpath>
 
                 <xpath expr="//field[@name='purchase_picking_type_id']" position="attributes">
@@ -63,9 +63,9 @@
                 <xpath expr="//field[@name='sale_picking_type_id']" position="attributes">
                     <attribute name="domain">domain_picking_type_id</attribute>
                 </xpath>
-                  <!-- <xpath expr="//field[@name='internal_picking_type_id']" position="attributes">
+                  <xpath expr="//field[@name='internal_picking_type_id']" position="attributes">
                     <attribute name="domain">domain_internal_picking_type_id</attribute>
-                </xpath> -->
+                </xpath>
             </field>
         </record>
 
