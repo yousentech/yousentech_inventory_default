@@ -64,7 +64,7 @@ class res_user_inventory_config(models.Model):
                 existing_records = self.search([
                     ('company_id', '=', record.company_id.id),
                     ('operation_type', '=', record.operation_type),
-                    ('id', '!=', record.id)
+                    ('id', '!=', record.id),('user_id','=',  self.env.uid)
                 ])
                 if existing_records:
                     raise ValidationError(
