@@ -7,9 +7,7 @@
             <field name="model">res.company</field>
             <field name="inherit_id" ref="base.view_company_form" />
             <field name="arch" type="xml">
-                <xpath expr="//notebook" position="inside">
-                    <!--  Inventory defaults  -->
-                    <page string="Inventory Defaults" name="inventory_defaults">
+                   <xpath expr="/form/sheet/notebook/page[@name='inventory_defaults']"   position="inside">
                         <group>
                             <group>
                                 <field name="domain_allowed_warehouse_ids" invisible="1" />
@@ -23,8 +21,7 @@
                             <group>
                                 <field name="default_product_type" />
                             </group>
-                        </group>
-                    </page>
+                        </group>   
                 </xpath>
 
             </field>
